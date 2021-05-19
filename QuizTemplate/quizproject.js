@@ -97,6 +97,9 @@ let questions = [
    }
  ];
  
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js');
+}
  
  function loadQuestion() {
    let message = "";
@@ -187,6 +190,3 @@ function again(){
   location.reload(true);
 }
 
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js');
-}
